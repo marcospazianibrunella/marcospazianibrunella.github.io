@@ -16,20 +16,19 @@
     
     
 
-<title>DPDK Quick Reference • Marco Spaziani Brunella</title>
+<title>Publications • Marco Spaziani Brunella</title>
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="DPDK Quick Reference"/>
-<meta name="twitter:description" content="Compile the igb_uio DPDK driver Suppose install_dir is /opt:
-$ sudo -s $ cd /opt/dpdk-19.05 $ make config T=x86_64-native-linuxapp-gcc $ make install T=x86_64-native-linuxapp-gcc -j 8 Insert the igb_uio DPDK driver $ sudo -s $ cd /opt/dpdk-19.05/x86_64-native-linuxapp-gcc $ modprobe uio $ insmod kmod/igb_uio.ko Bind interfaces to DPDK $ /usr/local/sbin/dpdk-devbind -s #List all available interfaces and status Network devices using DPDK-compatible driver ============================================ 0000:81:00.1 &#39;Ethernet 10G 2P X520 Adapter 154d&#39; drv=igb_uio unused=ixgbe Network devices using kernel driver =================================== 0000:01:00."/>
+<meta name="twitter:title" content="Publications"/>
+<meta name="twitter:description" content="2020  M. Spaziani Brunella, G. Belocchi, M. Bonola, S. Pontarelli, G. Siracusano, G. Bianchi, A. Cammarano, A. Palumbo, L. Petrucci, R. Bifulco. hXDP: Efficient Software Packet Processing on FPGA NICs. 14th USENIX Symposium on Operating Systems Design and Implementation [paper] Best Paper Award   2019   S. Pontarelli, R. Bifulco, M. Bonola, C. Cascone, M. Spaziani, V. Bruschi, D. Sanvito, G. Siracusano, A. Capone, M. Honda, F. Huici Flowblaze: Stateful packet processing in hardware."/>
 
-<meta property="og:title" content="DPDK Quick Reference" />
-<meta property="og:description" content="Compile the igb_uio DPDK driver Suppose install_dir is /opt:
-$ sudo -s $ cd /opt/dpdk-19.05 $ make config T=x86_64-native-linuxapp-gcc $ make install T=x86_64-native-linuxapp-gcc -j 8 Insert the igb_uio DPDK driver $ sudo -s $ cd /opt/dpdk-19.05/x86_64-native-linuxapp-gcc $ modprobe uio $ insmod kmod/igb_uio.ko Bind interfaces to DPDK $ /usr/local/sbin/dpdk-devbind -s #List all available interfaces and status Network devices using DPDK-compatible driver ============================================ 0000:81:00.1 &#39;Ethernet 10G 2P X520 Adapter 154d&#39; drv=igb_uio unused=ixgbe Network devices using kernel driver =================================== 0000:01:00." />
+<meta property="og:title" content="Publications" />
+<meta property="og:description" content="2020  M. Spaziani Brunella, G. Belocchi, M. Bonola, S. Pontarelli, G. Siracusano, G. Bianchi, A. Cammarano, A. Palumbo, L. Petrucci, R. Bifulco. hXDP: Efficient Software Packet Processing on FPGA NICs. 14th USENIX Symposium on Operating Systems Design and Implementation [paper] Best Paper Award   2019   S. Pontarelli, R. Bifulco, M. Bonola, C. Cascone, M. Spaziani, V. Bruschi, D. Sanvito, G. Siracusano, A. Capone, M. Honda, F. Huici Flowblaze: Stateful packet processing in hardware." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://marcospazianibrunella.github.io/posts/dpdk-quick-reference/" />
-<meta property="og:site_name" content="Title" />
+<meta property="og:url" content="https://marcospazianibrunella.github.io/publications/" />
+<meta property="article:published_time" content="2021-01-01T17:32:57+01:00" />
+<meta property="article:modified_time" content="2021-01-01T17:32:57+01:00" /><meta property="og:site_name" content="Title" />
 
 
     
@@ -187,11 +186,13 @@ $ sudo -s $ cd /opt/dpdk-19.05 $ make config T=x86_64-native-linuxapp-gcc $ make
     
 <article>
   <header>
-    <h1>DPDK Quick Reference</h1>
+    <h1>Publications</h1>
     
     
 <div class="post__meta">
     
+    
+      <i class="fas fa-calendar-alt"></i> Jan 1, 2021
     
     
     
@@ -206,56 +207,54 @@ $ sudo -s $ cd /opt/dpdk-19.05 $ make config T=x86_64-native-linuxapp-gcc $ make
   
   
   <div class="post">
-    <h2 id="compile-the-igb_uio-dpdk-driver">Compile the igb_uio DPDK driver</h2>
-<p>Suppose <em>install_dir</em> is <code>/opt</code>:</p>
-<pre><code>$ sudo -s
-$ cd /opt/dpdk-19.05
-$ make config T=x86_64-native-linuxapp-gcc
-$ make install T=x86_64-native-linuxapp-gcc -j 8
-</code></pre><h2 id="insert-the-igb_uio-dpdk-driver">Insert the igb_uio DPDK driver</h2>
-<pre><code>$ sudo -s
-$ cd /opt/dpdk-19.05/x86_64-native-linuxapp-gcc
-$ modprobe uio
-$ insmod kmod/igb_uio.ko
-</code></pre><h2 id="bind-interfaces-to-dpdk">Bind interfaces to DPDK</h2>
-<pre><code>$ /usr/local/sbin/dpdk-devbind -s #List all available interfaces and status
+    <h2 id="2020">2020</h2>
+<ul>
+<li><strong>M. Spaziani Brunella</strong>, G. Belocchi, M. Bonola, S. Pontarelli, G. Siracusano, G. Bianchi, A. Cammarano, A. Palumbo, L. Petrucci, R. Bifulco.
+<em>hXDP: Efficient Software Packet Processing on FPGA NICs</em>.
+14th USENIX Symposium on Operating Systems Design and Implementation [<a href="https://www.usenix.org/system/files/osdi20-brunella.pdf">paper</a>]
+<strong>Best Paper Award</strong></li>
+</ul>
+<hr>
+<h2 id="2019">2019</h2>
+<ul>
+<li>
+<p>S. Pontarelli, R. Bifulco, M. Bonola, C. Cascone, <strong>M. Spaziani</strong>, V. Bruschi, D. Sanvito, G. Siracusano, A. Capone, M. Honda, F. Huici
+<em>Flowblaze: Stateful packet processing in hardware</em>.
+16th USENIX Symposium on Networked Systems Design and Implementation [<a href="%5Dhttps://www.usenix.org/system/files/nsdi19-pontarelli.pdf">paper</a>]</p>
+</li>
+<li>
+<p><strong>M. Spaziani Brunella</strong>, G. Bianchi, S. Turco, F. Quaglia, N. Blefari-Melazzi.
+<em>Foreshadow-VMM: Feasibility and Network Perspective</em>.
+2019 IEEE Conference on Network Softwarization</p>
+</li>
+<li>
+<p><strong>M. Spaziani Brunella</strong>, S. Turco, G. Bianchi, N. Blefari-Melazzi.
+<em>Foreshadow-VMM: on the practical feasibility of L1 cache Terminal Fault attacks</em>.
+2019 ITASEC</p>
+</li>
+</ul>
+<hr>
+<h2 id="2018">2018</h2>
+<ul>
+<li><strong>M. Spaziani Brunella</strong>, S. Pontarelli, M. Bonola, G. Bianchi.
+<em>V-PMP: A VLIW Packet Manipulator Processor</em>.
+2018 European Conference on Networks and Communications</li>
+</ul>
+<hr>
+<h2 id="2017">2017</h2>
+<ul>
+<li>
+<p><strong>M. Spaziani Brunella</strong>, S. Pontarelli, F. Marrese, M. Bonola, G. Bianchi
+<em>Packet Manipulator Processor: A RISC-V VLIW core for networking applications</em>.
+7th RISC-V Workshop</p>
+</li>
+<li>
+<p>A. Nannarelli, M. Re, G.C. Cardarilli, L. Di Nunzio, <strong>M. Spaziani Brunella</strong>, R. Fazzolari, F. Carbonari
+<em>Robust throughput boosting for low latency dynamic partial reconfiguration</em>.
+2017 30th IEEE International System-on-Chip Conference</p>
+</li>
+</ul>
 
-Network devices using DPDK-compatible driver
-============================================
-0000:81:00.1 'Ethernet 10G 2P X520 Adapter 154d' drv=igb_uio unused=ixgbe
-
-Network devices using kernel driver
-===================================
-0000:01:00.0 'I350 Gigabit Network Connection 1521' if=eno1 drv=igb unused=igb_uio *Active*
-0000:01:00.1 'I350 Gigabit Network Connection 1521' if=eno2 drv=igb unused=igb_uio
-0000:01:00.2 'I350 Gigabit Network Connection 1521' if=eno3 drv=igb unused=igb_uio
-0000:01:00.3 'I350 Gigabit Network Connection 1521' if=eno4 drv=igb unused=igb_uio
-0000:03:00.0 'Ethernet 10G 2P X520 Adapter 154d' if=eth0 drv=ixgbe unused=igb_uio
-0000:03:00.1 'Ethernet 10G 2P X520 Adapter 154d' if=eth1 drv=ixgbe unused=igb_uio
-
-Other Network devices
-=====================
-0000:81:00.0 'Ethernet 10G 2P X520 Adapter 154d' unused=ixgbe,igb_uio
-
-No 'Crypto' devices detected
-============================
-
-No 'Eventdev' devices detected
-==============================
-
-No 'Mempool' devices detected
-=============================
-
-No 'Compress' devices detected
-==============================
-</code></pre><p>To bind an interface, record the id xxxx:xx:xx.x (e.g. 0000:03:00.1) and:</p>
-<pre><code>$ dpdk-devbind -b igb_uio xxxx:xx:xx.x
-</code></pre><p>Now the interface should appear under <em>Network devices using DPDK-compatible driver</em> under <code>dpdk-devbind -s</code>.<!-- raw HTML omitted --></p>
-<h2 id="unbind-interfaces-from-dpdk">Unbind interfaces from DPDK</h2>
-<pre><code>$ dpdk-devbind -u xxxx:xx:xx.x
-</code></pre><h2 id="bind-interfaces-to-kernel">Bind interfaces to Kernel</h2>
-<pre><code>$ dpdk-devbind -b &quot;ixgbe|igb&quot; xxxx:xx:xx.x
-</code></pre>
   </div>
   
 

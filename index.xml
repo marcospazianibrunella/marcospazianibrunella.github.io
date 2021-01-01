@@ -8,6 +8,15 @@
     <language>en</language>
     <lastBuildDate>Thu, 21 Jun 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://marcospazianibrunella.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Publications</title>
+      <link>https://marcospazianibrunella.github.io/publications/</link>
+      <pubDate>Fri, 01 Jan 2021 17:32:57 +0100</pubDate>
+      
+      <guid>https://marcospazianibrunella.github.io/publications/</guid>
+      <description>2020  M. Spaziani Brunella, G. Belocchi, M. Bonola, S. Pontarelli, G. Siracusano, G. Bianchi, A. Cammarano, A. Palumbo, L. Petrucci, R. Bifulco. hXDP: Efficient Software Packet Processing on FPGA NICs. 14th USENIX Symposium on Operating Systems Design and Implementation [paper] Best Paper Award   2019   S. Pontarelli, R. Bifulco, M. Bonola, C. Cascone, M. Spaziani, V. Bruschi, D. Sanvito, G. Siracusano, A. Capone, M. Honda, F. Huici Flowblaze: Stateful packet processing in hardware.</description>
+    </item>
+    
+    <item>
       <title>DERA</title>
       <link>https://marcospazianibrunella.github.io/portfolio/dera/</link>
       <pubDate>Thu, 21 Jun 2018 00:00:00 +0000</pubDate>
