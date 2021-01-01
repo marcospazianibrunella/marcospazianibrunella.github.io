@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    
+
+
+    <head>
+    <link href="https://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Enable responsiveness on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.78.2" />
+
+    
+    
+    
+
+<title>System Design Papers Guidelines • Marco Spaziani Brunella</title>
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="System Design Papers Guidelines"/>
+<meta name="twitter:description" content="Mostly from tweets of Vijay Chidambaram
+General  The most important aspect is problem selection. The problem has to be timely and significant. By reading a lot of SOSP/OSDI papers, you develop a sense of whether a given problem is significant enough. If you tackle the “wrong” problem, paper won’t get accepted no matter what. Building a real system (to the point it can run actual user workloads). It is rare to have SOSP or OSDI papers based on simulation."/>
+
+<meta property="og:title" content="System Design Papers Guidelines" />
+<meta property="og:description" content="Mostly from tweets of Vijay Chidambaram
+General  The most important aspect is problem selection. The problem has to be timely and significant. By reading a lot of SOSP/OSDI papers, you develop a sense of whether a given problem is significant enough. If you tackle the “wrong” problem, paper won’t get accepted no matter what. Building a real system (to the point it can run actual user workloads). It is rare to have SOSP or OSDI papers based on simulation." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://marcospazianibrunella.github.io/posts/systems-paper/" />
+<meta property="og:site_name" content="Title" />
+
+
+    
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/scss/hyde-hyde.81eeaf8bb2fc7fae56e5f1c6f6bc7c88d1ae6aabd7e2251145aefea36655919d.css" integrity="sha256-ge6vi7L8f65W5fHG9rx8iNGuaqvX4iURRa7&#43;o2ZVkZ0=">
+
+
+<link rel="stylesheet" href="/scss/print.2744dcbf8a0b2e74f8a50e4b34e5f441be7cf93cc7de27029121c6a09f9e77bc.css" integrity="sha256-J0Tcv4oLLnT4pQ5LNOX0Qb58&#43;TzH3icCkSHGoJ&#43;ed7w=" media="print">
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/favicon.png">
+    
+    
+
+</head>
+
+
+    <body class=" ">
+    
+<div class="sidebar">
+  <div class="container ">
+    <div class="sidebar-about">
+      <span class="site__title">
+        <a href="https://marcospazianibrunella.github.io/">
+        
+          Marco Spaziani Brunella
+        
+        </a>
+      </span>
+      
+        
+        
+        
+        <div class="author-image">
+          <img src="https://marcospazianibrunella.github.io/img/me_london.png" alt="Author Image" class="img--headshot element--center">
+        </div>
+        
+      
+      
+      <p class="site__description">
+        
+      </p>
+    </div>
+    <div class="collapsible-menu">
+      <input type="checkbox" id="menuToggle">
+      <label for="menuToggle">Marco Spaziani Brunella</label>
+      <div class="menu-content">
+        <div>
+	<ul class="sidebar-nav">
+		 
+		 
+			 
+				<li>
+					<a href="/">
+						<span>Home</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/posts/">
+						<span>Posts</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/publications/">
+						<span>Publications</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/teaching">
+						<span>Teaching</span>
+					</a>
+				</li>
+			 
+		
+	</ul>
+</div>
+
+        <section class="social">
+	
+	<a href="https://twitter.com/marcux_95" rel="me"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+	
+	<a href="https://gitlab.com/marcux_95" rel="me"><i class="fab fa-gitlab fa-lg" aria-hidden="true"></i></a>
+	
+	
+	<a href="https://instagram.com/wernerh__" rel="me"><i class="fab fa-instagram fa-lg" aria-hidden="true"></i></a>
+	
+	
+	<a href="https://linkedin.com/in/marco-spaziani-brunella" rel="me"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<a href="mailto:marco.spaziani.brunella@uniroma2.it" rel="me"><i class="fas fa-at fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+</section>
+
+      </div>
+    </div>
+    
+<div class="copyright">
+  &copy; 2020 - 2021 M. Spaziani Brunella
+  
+</div>
+
+
+
+  </div>
+</div>
+
+        <div class="content container">
+            
+    
+<article>
+  <header>
+    <h1>System Design Papers Guidelines</h1>
+    
+    
+<div class="post__meta">
+    
+    
+    
+    
+    
+    
+    <br/>
+    
+</div>
+
+
+  </header>
+  
+  
+  <div class="post">
+    <p>Mostly from tweets of <a href="https://twitter.com/vj_chidambaram">Vijay Chidambaram</a></p>
+<h2 id="general">General</h2>
+<ul>
+<li>The most important aspect is problem selection. The problem has to be timely and significant. By reading a lot of SOSP/OSDI papers, you develop a sense of whether a given problem is significant enough. If you tackle the “wrong” problem, paper won’t get accepted no matter what.</li>
+<li>Building a real system (to the point it can run actual user workloads). It is rare to have SOSP or OSDI papers based on simulation. Measurement papers don’t build a real system, but then have the burden of interesting, surprising insights.</li>
+<li>Most SOSP/OSDI papers have a strong evaluation.</li>
+<li>SOSP and OSDI papers usually have impressive results (though not always). If the focus is perf, perf is improved by a lot. If the focus is finding bugs, a lot of new bugs are discovered. If the focus is measurement, the paper usually contains multiple interesting insights.</li>
+<li>Writing is super super important. It doesn’t matter how good your results are if nobody can understand them. The problem must be clear and well-motivated, the insights behind the solution described, and results must be explained. Writing is the most common failure mode. Rejected papers at SOSP and OSDI usually contain amazing results which are not explained well.</li>
+<li>A good SOSP/OSDI weaves a tightly-knot, engrossing story:</li>
+</ul>
+<blockquote>
+<p>Here’s this important problem.
+But look, current solutions are bad!
+Insight: we can solve it by doing X!
+Here’s how we built a system around this insight.
+Since we do X, perf is up Y%!
+We can do new thing Z!</p>
+</blockquote>
+<ul>
+<li>The “story” aspect is the toughest to obtain, because a bunch of incoherent techniques won’t cut it. It has to make sense to the reviewer intuitively. The story aspect improves (for me) as we rewrite the paper – the story in the first draft is rarely what gets submitted.<!-- raw HTML omitted --></li>
+</ul>
+<h2 id="evaluation">Evaluation</h2>
+<p>Needs to answer three questions:</p>
+<ul>
+<li>What are the strengths and weakness of your system? –&gt; Microbenchmarks</li>
+<li>How does it compare to the state-of-the-art approaches? –&gt; Comparison with open source systems</li>
+<li>How does it improve the performance of real applications? -&gt; Need to find <strong>real</strong> applications that can run on top of the system</li>
+</ul>
+<hr>
+<ul>
+<li>
+<p>Other conferences don’t place a lot of value on #3, but SOSP/OSDI always do this. Its one of the stand-out features of the conference. So if you are hoping to have your paper appear there, you have to put in the work to do this.</p>
+</li>
+<li>
+<p>There is a good reason SOSP/OSDI insist on performance impact on real applications. Many research projects optimize for use-cases that are not common at all. It is troubling if there isn’t a single application for the use case.</p>
+</li>
+<li>
+<p>Of course, all evaluation isn’t about performance. If your approach enables new functionality, then you have to show why its hard/inefficient to do it with current approaches.</p>
+</li>
+<li>
+<p>Whatever the idea is, in the end, OSDI likes to see a real system that can be evaluated to get quantitive numbers. Earlier-stage projects are not a good fit I guess.</p>
+</li>
+<li>
+<p>If the system allows you to perform actions that weren’t possible before, showing that is a good evaluation too. Authors usually show it is much harder and more inefficient to do the same thing in an existing system.</p>
+</li>
+</ul>
+<h2 id="useful-links">Useful Links</h2>
+<ul>
+<li><a href="http://www.sigplan.org/Resources/EmpiricalEvaluation/">SIGPLAN Empirical Evaluation Checklist (click on the image)</a></li>
+</ul>
+
+  </div>
+  
+
+
+  
+
+  
+    
+
+
+</article>
+
+
+        </div>
+        
+    
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-152650145-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+    
+
+
+
+    </body>
+</html>
